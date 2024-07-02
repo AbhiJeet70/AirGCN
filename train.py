@@ -15,7 +15,7 @@ def train_model(model, pyg_data, lr, weight_decay):
         model.train()
         optimizer.zero_grad()
         out = model(pyg_data.x, pyg_data.edge_index)
-        loss = F.nll_loss(out[pyg_data.train_mask], pyg_data.y[pyg_data.train_mask])
+        loss = F.cross_entropy(out[pyg_data.train_mask], pyg_data.y[pyg_data.train_mask])
         loss.backward()
         optimizer.step()
 
