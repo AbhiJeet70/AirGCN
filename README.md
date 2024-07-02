@@ -42,6 +42,7 @@ python train.py
 ```
 
 The script processes each country's dataset, prints dataset statistics, trains the model, and outputs the best accuracy.
+
 You can check the AirGCN.ipynb file for the results. It contains the same code in a notebook.
 
 
